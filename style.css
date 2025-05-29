@@ -1,38 +1,127 @@
-/* Import the Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Root Colors for easy editing */
+:root {
+  --primary: #1976D2;      /* Trust - Blue */
+  --primary-dark: #0D47A1;
+  --accent: #FFC107;       /* Excitement - Gold */
+  --accent-dark: #FF9800;
+  --success: #43A047;      /* Happiness - Green */
+  --danger: #D84315;       /* African earth red */
+  --bg: #F7FAFC;           /* Light background */
+  --text: #1B1B1B;
+  --card-bg: #FFF;
+}
 
-/* Apply the Coverfly (Inter) font to everything */
+/* Basic styles */
 body {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    background: #fff6fb; /* very light pink */
-    color: #111; /* almost black for readability */
-    margin: 0;
-    padding: 0;
+  font-family: 'Inter', 'Arial', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
 }
 
-/* Header styles */
+/* Header */
 header {
-    background: #7C3AED; /* A nice purple */
-    color: #fff;
-    padding: 1.5rem 2rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(124,58,237,0.08);
+  background: linear-gradient(90deg, var(--primary), var(--accent-dark));
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
 }
 
-/* Example for main content area */
-main {
-    background: transparent;
-    padding: 2rem;
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, var(--accent) 60%, var(--success) 100%);
+  color: var(--primary-dark);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-radius: 0 0 36px 36px;
+  box-shadow: 0 8px 32px rgba(67,160,71,0.09);
+}
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
 }
 
-/* Optional: Style links for accessibility */
-a {
-    color: #7C3AED;
-    text-decoration: underline;
+/* Card/Form Section */
+.form-section {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  max-width: 650px;
+  margin: 2.5rem auto;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(25,118,210,0.09);
+  border: 1px solid #e0e0e0;
 }
-a:hover {
-    color: #a78bfa;
+
+/* Inputs and Buttons */
+input, select, textarea {
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.85rem;
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #FFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 8px var(--accent);
+  outline: none;
+}
+button {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #FFF;
+  border: none;
+  border-radius: 24px;
+  padding: 0.85rem 2.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.10);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+button:hover {
+  background: linear-gradient(90deg, var(--success), var(--accent-dark));
+  box-shadow: 0 8px 32px rgba(255,193,7,0.12);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.25rem;
+  background: var(--primary-dark);
+  color: #fff;
+  border-top: 2px solid var(--accent-dark);
+  box-shadow: 0 -2px 12px rgba(25,118,210,0.05);
+}
+
+/* Utility classes */
+.hidden { display: none; }
+
+/* Add African-inspired pattern or color blocks as accents */
+.pattern-accent {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--danger),
+    var(--danger) 10px,
+    var(--accent) 10px,
+    var(--accent) 20px
+  );
+  height: 6px;
+  border-radius: 12px;
+  margin: 1rem 0;
 }
