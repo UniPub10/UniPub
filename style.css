@@ -1,23 +1,24 @@
-/* Root Colors for easy editing */
+/* Root Colors for Navy Blue & Orange Palette */
 :root {
-  --primary: #1976D2;      /* Trust - Blue */
-  --primary-dark: #0D47A1;
-  --accent: #FFC107;       /* Excitement - Gold */
-  --accent-dark: #FF9800;
-  --success: #43A047;      /* Happiness - Green */
-  --danger: #D84315;       /* African earth red */
-  --bg: #F7FAFC;           /* Light background */
-  --text: #1B1B1B;
-  --card-bg: #FFF;
+  --primary: #14213d;         /* Navy Blue */
+  --primary-dark: #1a2238;    /* Deeper Navy */
+  --accent: #fca311;          /* Orange */
+  --accent-dark: #ff6a00;     /* Deep Orange */
+  --bg: #f7fafc;              /* Light background */
+  --text: #22223b;            /* Dark gray-blue for text */
+  --card-bg: #fff;
 }
 
-/* Basic styles */
+/* Base Styles */
 body {
-  font-family: 'Inter', 'Arial', sans-serif;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12pt;
   background: var(--bg);
   color: var(--text);
   margin: 0;
   padding: 0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 /* Header */
@@ -28,30 +29,51 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+  box-shadow: 0 2px 12px rgba(20, 33, 61, 0.09);
 }
+
 header h1 {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
   font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(120deg, var(--accent) 60%, var(--success) 100%);
+  background: linear-gradient(120deg, var(--accent) 70%, var(--bg) 100%);
   color: var(--primary-dark);
   padding: 2.5rem 1rem;
   text-align: center;
   border-radius: 0 0 36px 36px;
-  box-shadow: 0 8px 32px rgba(67,160,71,0.09);
+  box-shadow: 0 8px 32px rgba(252, 163, 17, 0.09);
 }
+
 .hero h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 2.3rem;
+  font-weight: bold;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
+
 .hero p {
   font-size: 1.2rem;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 /* Card/Form Section */
@@ -61,8 +83,15 @@ header h1 {
   max-width: 650px;
   margin: 2.5rem auto;
   border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(25,118,210,0.09);
+  box-shadow: 0 8px 32px rgba(20, 33, 61, 0.09);
   border: 1px solid #e0e0e0;
+}
+
+.form-section h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
 /* Inputs and Buttons */
@@ -73,30 +102,35 @@ input, select, textarea {
   border: 1.5px solid var(--primary);
   border-radius: 8px;
   font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
   background: #FFF;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 input:focus, select:focus, textarea:focus {
   border-color: var(--accent-dark);
   box-shadow: 0 0 8px var(--accent);
   outline: none;
 }
+
 button {
   background: linear-gradient(90deg, var(--primary), var(--accent));
   color: #FFF;
   border: none;
   border-radius: 24px;
   padding: 0.85rem 2.2rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 1px;
-  box-shadow: 0 4px 16px rgba(25,118,210,0.10);
+  font-family: "Courier New", Courier, monospace;
+  box-shadow: 0 4px 16px rgba(20, 33, 61, 0.11);
   cursor: pointer;
   transition: background 0.3s, box-shadow 0.3s;
 }
+
 button:hover {
-  background: linear-gradient(90deg, var(--success), var(--accent-dark));
-  box-shadow: 0 8px 32px rgba(255,193,7,0.12);
+  background: linear-gradient(90deg, var(--accent-dark), var(--primary-dark));
+  box-shadow: 0 8px 32px rgba(252, 163, 17, 0.13);
 }
 
 /* Footer */
@@ -106,22 +140,37 @@ footer {
   background: var(--primary-dark);
   color: #fff;
   border-top: 2px solid var(--accent-dark);
-  box-shadow: 0 -2px 12px rgba(25,118,210,0.05);
+  box-shadow: 0 -2px 12px rgba(20, 33, 61, 0.05);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
 }
 
 /* Utility classes */
 .hidden { display: none; }
 
-/* Add African-inspired pattern or color blocks as accents */
+/* Decorative Accent Bar */
 .pattern-accent {
   background: repeating-linear-gradient(
     135deg,
-    var(--danger),
-    var(--danger) 10px,
+    var(--primary),
+    var(--primary) 10px,
     var(--accent) 10px,
     var(--accent) 20px
   );
   height: 6px;
   border-radius: 12px;
   margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .form-section {
+    padding: 1.2rem;
+  }
+  header, .hero {
+    padding: 1rem;
+  }
+  header h1, .hero h2 {
+    font-size: 1.4rem;
+  }
 }
