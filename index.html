@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniPub – A Home for African and Global Storytellers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>UniPub</h1>
+    <nav><a href="#submit">Submit</a></nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to UniPub</h2>
+    <p>A home for dreamers, storytellers, screenwriters, novelists, poets—anyone with a story to tell.</p>
+    <p>No subscriptions. No gatekeeping. Just storytelling.</p>
+  </section>
+
+  <section id="submit" class="form-section">
+    <h3>Submit Your Story</h3>
+    <form action="https://formspree.io/f/yourFormID" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="country" placeholder="Country" required />
+      <input type="number" name="age" placeholder="Age" required />
+      <select name="gender">
+        <option value="">Gender (optional)</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Prefer not to say</option>
+      </select>
+      <select name="role">
+        <option value="">Your Role (optional)</option>
+        <option>Screenwriter</option>
+        <option>Author</option>
+        <option>Poet</option>
+        <option>Story Idea Creator</option>
+        <option>Other</option>
+      </select>
+      <textarea name="description" maxlength="300" placeholder="Short Description of Your Submission (300 characters max)"></textarea>
+      <input type="file" name="file" accept=".pdf,.doc,.docx,.txt" required />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="confirmation" class="hidden">Thank you for submitting your work to UniPub! Your story has been received.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UniPub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
