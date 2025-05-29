@@ -1,20 +1,16 @@
-/* Root Colors for Navy Blue & Orange Palette */
+/* Root Colors */
 :root {
-  --primary: #14213d;         /* Navy Blue */
-  --primary-dark: #1a2238;    /* Deeper Navy */
-  --accent: #fca311;          /* Orange */
-  --accent-dark: #ff6a00;     /* Deep Orange */
-  --bg: #f7fafc;              /* Light background */
-  --text: #22223b;            /* Dark gray-blue for text */
-  --card-bg: #fff;
+  --purple: #800080;
+  --light-pink: #ffe4ee;
+  --white: #fff;
 }
 
 /* Base Styles */
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--light-pink);
+  color: var(--white);
   margin: 0;
   padding: 0;
   line-height: 1.7;
@@ -23,25 +19,26 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(90deg, var(--primary), var(--accent-dark));
-  color: #fff;
+  background: var(--purple);
+  color: var(--white);
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 12px rgba(20, 33, 61, 0.09);
+  box-shadow: 0 2px 12px rgba(128, 0, 128, 0.09);
 }
 
 header h1 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2.2rem;
   letter-spacing: 2px;
   margin: 0;
+  color: var(--white);
 }
 
 nav a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   margin: 0 1.5rem;
   font-weight: 600;
@@ -49,48 +46,51 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent);
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(120deg, var(--accent) 70%, var(--bg) 100%);
-  color: var(--primary-dark);
+  background: var(--purple);
+  color: var(--white);
   padding: 2.5rem 1rem;
   text-align: center;
   border-radius: 0 0 36px 36px;
-  box-shadow: 0 8px 32px rgba(252, 163, 17, 0.09);
+  box-shadow: 0 8px 32px rgba(128, 0, 128, 0.09);
 }
 
 .hero h2 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 2.3rem;
   font-weight: bold;
   margin-bottom: 1rem;
   letter-spacing: 1px;
+  color: var(--white);
 }
 
 .hero p {
   font-size: 1.2rem;
   margin: 0 auto;
   max-width: 600px;
+  color: var(--white);
 }
 
 /* Card/Form Section */
 .form-section {
-  background: var(--card-bg);
+  background: var(--white);
   padding: 2.5rem;
   max-width: 650px;
   margin: 2.5rem auto;
   border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(20, 33, 61, 0.09);
+  box-shadow: 0 8px 32px rgba(128, 0, 128, 0.09);
   border: 1px solid #e0e0e0;
+  color: var(--purple);
 }
 
 .form-section h3 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--purple);
   margin-bottom: 1.5rem;
 }
 
@@ -99,68 +99,55 @@ input, select, textarea {
   width: 100%;
   margin: 0.5rem 0 1rem 0;
   padding: 0.85rem;
-  border: 1.5px solid var(--primary);
+  border: 1.5px solid var(--purple);
   border-radius: 8px;
   font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
-  background: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--purple);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: var(--accent-dark);
-  box-shadow: 0 0 8px var(--accent);
+  border-color: var(--purple);
+  box-shadow: 0 0 8px var(--purple);
   outline: none;
 }
 
 button {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  color: #FFF;
+  background: var(--purple);
+  color: var(--white);
   border: none;
   border-radius: 24px;
   padding: 0.85rem 2.2rem;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 1px;
-  font-family: "Courier New", Courier, monospace;
-  box-shadow: 0 4px 16px rgba(20, 33, 61, 0.11);
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 16px rgba(128, 0, 128, 0.11);
   cursor: pointer;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-  background: linear-gradient(90deg, var(--accent-dark), var(--primary-dark));
-  box-shadow: 0 8px 32px rgba(252, 163, 17, 0.13);
+  background: #9b30ff;
+  box-shadow: 0 8px 32px rgba(128, 0, 128, 0.13);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1.25rem;
-  background: var(--primary-dark);
-  color: #fff;
-  border-top: 2px solid var(--accent-dark);
-  box-shadow: 0 -2px 12px rgba(20, 33, 61, 0.05);
+  background: var(--purple);
+  color: var(--white);
+  border-top: 2px solid #e0e0e0;
+  box-shadow: 0 -2px 12px rgba(128, 0, 128, 0.05);
   font-size: 1rem;
   letter-spacing: 0.02em;
 }
 
 /* Utility classes */
 .hidden { display: none; }
-
-/* Decorative Accent Bar */
-.pattern-accent {
-  background: repeating-linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary) 10px,
-    var(--accent) 10px,
-    var(--accent) 20px
-  );
-  height: 6px;
-  border-radius: 12px;
-  margin: 1rem 0;
-}
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
