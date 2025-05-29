@@ -1,58 +1,38 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Apply the Coverfly (Inter) font to everything */
 body {
-    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
-    background: #fff;
-    color: #222;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: #fff6fb; /* very light pink */
+    color: #111; /* almost black for readability */
     margin: 0;
     padding: 0;
 }
 
+/* Header styles */
 header {
-    background: #673ab7;
+    background: #7C3AED; /* A nice purple */
     color: #fff;
     padding: 1.5rem 2rem;
-    box-shadow: 0 2px 8px rgba(103, 58, 183, 0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.08);
 }
 
-h1, h2, h3 {
-    color: #512da8;
-    margin-bottom: 0.5em;
+/* Example for main content area */
+main {
+    background: transparent;
+    padding: 2rem;
 }
 
+/* Optional: Style links for accessibility */
 a {
-    color: #673ab7;
-    text-decoration: none;
-    transition: color 0.2s;
+    color: #7C3AED;
+    text-decoration: underline;
 }
 a:hover {
-    color: #9575cd;
-}
-
-.card {
-    background: #ede7f6;
-    border-radius: 16px;
-    box-shadow: 0 2px 6px rgba(103, 58, 183, 0.08);
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 600px;
-    transition: box-shadow 0.2s;
-}
-.card:hover {
-    box-shadow: 0 4px 12px rgba(103, 58, 183, 0.16);
-}
-
-.button, button {
-    background: #673ab7;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.75em 2em;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.button:hover, button:hover {
-    background: #512da8;
+    color: #a78bfa;
 }
