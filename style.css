@@ -1,176 +1,58 @@
-/* Root Colors for Navy Blue & Orange Palette */
-:root {
-  --primary: #14213d;         /* Navy Blue */
-  --primary-dark: #1a2238;    /* Deeper Navy */
-  --accent: #fca311;          /* Orange */
-  --accent-dark: #ff6a00;     /* Deep Orange */
-  --bg: #f7fafc;              /* Light background */
-  --text: #22223b;            /* Dark gray-blue for text */
-  --card-bg: #fff;
-}
-
-/* Base Styles */
 body {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 12pt;
-  background: var(--bg);
-  color: var(--text);
-  margin: 0;
-  padding: 0;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
+    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
 header {
-  background: linear-gradient(90deg, var(--primary), var(--accent-dark));
-  color: #fff;
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 12px rgba(20, 33, 61, 0.09);
+    background: #673ab7;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(103, 58, 183, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  font-size: 2.2rem;
-  letter-spacing: 2px;
-  margin: 0;
+h1, h2, h3 {
+    color: #512da8;
+    margin-bottom: 0.5em;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1.5rem;
-  font-weight: 600;
-  transition: color 0.2s;
+a {
+    color: #673ab7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #9575cd;
 }
 
-nav a:hover {
-  color: var(--accent);
+.card {
+    background: #ede7f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(103, 58, 183, 0.08);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 4px 12px rgba(103, 58, 183, 0.16);
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(120deg, var(--accent) 70%, var(--bg) 100%);
-  color: var(--primary-dark);
-  padding: 2.5rem 1rem;
-  text-align: center;
-  border-radius: 0 0 36px 36px;
-  box-shadow: 0 8px 32px rgba(252, 163, 17, 0.09);
+.button, button {
+    background: #673ab7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75em 2em;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
 }
-
-.hero h2 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 2.3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-/* Card/Form Section */
-.form-section {
-  background: var(--card-bg);
-  padding: 2.5rem;
-  max-width: 650px;
-  margin: 2.5rem auto;
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(20, 33, 61, 0.09);
-  border: 1px solid #e0e0e0;
-}
-
-.form-section h3 {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
-
-/* Inputs and Buttons */
-input, select, textarea {
-  width: 100%;
-  margin: 0.5rem 0 1rem 0;
-  padding: 0.85rem;
-  border: 1.5px solid var(--primary);
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
-  background: #FFF;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: var(--accent-dark);
-  box-shadow: 0 0 8px var(--accent);
-  outline: none;
-}
-
-button {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  color: #FFF;
-  border: none;
-  border-radius: 24px;
-  padding: 0.85rem 2.2rem;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  font-family: "Courier New", Courier, monospace;
-  box-shadow: 0 4px 16px rgba(20, 33, 61, 0.11);
-  cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  background: linear-gradient(90deg, var(--accent-dark), var(--primary-dark));
-  box-shadow: 0 8px 32px rgba(252, 163, 17, 0.13);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.25rem;
-  background: var(--primary-dark);
-  color: #fff;
-  border-top: 2px solid var(--accent-dark);
-  box-shadow: 0 -2px 12px rgba(20, 33, 61, 0.05);
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-}
-
-/* Utility classes */
-.hidden { display: none; }
-
-/* Decorative Accent Bar */
-.pattern-accent {
-  background: repeating-linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary) 10px,
-    var(--accent) 10px,
-    var(--accent) 20px
-  );
-  height: 6px;
-  border-radius: 12px;
-  margin: 1rem 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 700px) {
-  .form-section {
-    padding: 1.2rem;
-  }
-  header, .hero {
-    padding: 1rem;
-  }
-  header h1, .hero h2 {
-    font-size: 1.4rem;
-  }
+.button:hover, button:hover {
+    background: #512da8;
 }
