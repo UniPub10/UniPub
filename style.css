@@ -180,9 +180,3 @@ footer {
   }
 }
 
-#logo-video {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%; /* makes the logo circular, optional */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* optional */
-}
