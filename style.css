@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 /* Root Colors */
 :root {
   --purple: #800080;
@@ -24,19 +26,35 @@ header {
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center contents horizontally */
   box-shadow: 0 2px 12px rgba(128, 0, 128, 0.09);
+  position: relative;
 }
 
 header h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 2.2rem;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
   letter-spacing: 2px;
   margin: 0;
   color: var(--white);
+  text-align: center;
+  flex: 0 1 auto;
+  width: 100%;
 }
 
+/* Optional: Hide nav if you don't have links, or use absolute positioning to keep h1 centered if you do */
+header nav {
+  position: absolute;
+  left: 2rem;
+  /* right: 2rem; if you have nav on the right */
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Nav links, if you use them */
 nav a {
   color: var(--white);
   text-decoration: none;
@@ -149,7 +167,6 @@ footer {
 /* Utility classes */
 .hidden { display: none; }
 
-/* Responsive adjustments */
 @media (max-width: 700px) {
   .form-section {
     padding: 1.2rem;
