@@ -1,36 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UniPub – A Home for African and Global Storytellers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Welcome to UniPub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .video-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .overlay-content {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .overlay-content h1 {
+            background: rgba(0,0,0,0.6);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+        }
+        @media (max-width: 600px) {
+            .overlay-content h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <video id="logo-video" src="logo (animated).mp4" autoplay loop muted playsinline></video>
-    <nav><a href="#submit">Submit</a></nav>
-  </header>
+    <div class="video-container">
+        <video id="welcomeVideo" autoplay muted playsinline>
+            <source src="your-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-content">
+            <h1>Welcome to UniPub</h1>
+            <!-- You can add more content here if needed -->
+        </div>
+    </div>
 
-  <section class="hero">
-    <h2>Welcome to UniPub</h2>
-    <p>A home for dreamers, storytellers, screenwriters, novelists, poets—anyone with a story to tell.</p>
-    <p>No subscriptions. No gatekeeping. Just storytelling.</p>
-  </section>
+    <script>
+        // Ensure video does not loop
+        const video = document.getElementById('welcomeVideo');
+        video.loop = false;
 
-  <section id="submit" class="form-section">
-    <h3>Submit Your Story</h3>
-    <a href="https://forms.gle/BBP3Ca5VTV2NFKSe7" target="_blank" rel="noopener">
-      <button type="button">Get Started</button>
-    </a>
-    <p id="confirmation" class="hidden">Thank you for submitting your work to UniPub! Your story has been received.</p>
-  </section>
+        // Optional: Unmute on user interaction (if you want sound)
+        // video.muted = false; // Uncomment this line and add an event listener if needed
 
-  <footer>
-    <p>&copy; 2025 Universal Publications. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+        // Optional: Play again if you want a manual replay button
+        // Example:
+        // document.getElementById('replayBtn').onclick = () => video.play();
+    </script>
 </body>
 </html>
