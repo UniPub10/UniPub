@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-/* Root Colors */
 :root {
   --purple: #800080;
   --light-pink: #ffe4ee;
   --white: #fff;
 }
 
-/* Base Styles */
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
@@ -20,7 +18,6 @@ body {
   letter-spacing: 0.01em;
 }
 
-/* Header */
 header {
   background: var(--purple);
   color: var(--white);
@@ -32,18 +29,18 @@ header {
   position: relative;
 }
 
-/* Logo Image */
-#logo-image {
-  display: block;
-  height: 64px;
-  width: auto;
-  margin-right: 1.5rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  background: var(--white);
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  flex: 0 1 auto;
+  width: 100%;
 }
 
-/* Navigation */
 header nav {
   position: absolute;
   left: 2rem;
@@ -65,7 +62,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
 .hero {
   background: var(--purple);
   color: var(--white);
@@ -91,7 +87,6 @@ nav a:hover {
   color: var(--white);
 }
 
-/* Card/Form Section */
 .form-section {
   background: var(--white);
   padding: 2.5rem;
@@ -110,7 +105,6 @@ nav a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* Inputs and Buttons */
 input, select, textarea {
   width: 100%;
   margin: 0.5rem 0 1rem 0;
@@ -150,7 +144,6 @@ button:hover {
   box-shadow: 0 8px 32px rgba(128, 0, 128, 0.13);
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1.25rem;
@@ -162,7 +155,6 @@ footer {
   letter-spacing: 0.02em;
 }
 
-/* Utility classes */
 .hidden { display: none; }
 
 @media (max-width: 700px) {
@@ -172,8 +164,7 @@ footer {
   header, .hero {
     padding: 1rem;
   }
-  #logo-image {
-    height: 40px;
-    margin-right: 1rem;
+  .logo-text, .hero h2 {
+    font-size: 1.4rem;
   }
 }
