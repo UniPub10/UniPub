@@ -27,35 +27,32 @@ header {
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center contents horizontally */
+  justify-content: center;
   box-shadow: 0 2px 12px rgba(128, 0, 128, 0.09);
   position: relative;
 }
 
-header h1 {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 3.4rem;
-  letter-spacing: 1px;
-  margin: 0;
-  color: var(--white);
-  text-align: center;
-  flex: 0 1 auto;
-  width: 100%;
+/* Logo Image */
+#logo-image {
+  display: block;
+  height: 64px;
+  width: auto;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: var(--white);
 }
 
-/* Optional: Hide nav if you don't have links, or use absolute positioning to keep h1 centered if you do */
+/* Navigation */
 header nav {
   position: absolute;
   left: 2rem;
-  /* right: 2rem; if you have nav on the right */
   top: 0;
   bottom: 0;
   display: flex;
   align-items: center;
 }
 
-/* Nav links, if you use them */
 nav a {
   color: var(--white);
   text-decoration: none;
@@ -175,8 +172,8 @@ footer {
   header, .hero {
     padding: 1rem;
   }
-  header h1, .hero h2 {
-    font-size: 1.4rem;
+  #logo-image {
+    height: 40px;
+    margin-right: 1rem;
   }
 }
-
